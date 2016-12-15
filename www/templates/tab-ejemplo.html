@@ -1,0 +1,71 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list>
+    <div id="gridWrapper">
+	      	<div class="flipBtnWrapper">
+			    <input type="checkbox" class="flipBtn_checkbox" ng-checked="dataEjemplo.tlSlot.estado != 'Oculto'" ng-click="RadioButtonClick('TL')" ng-disabled = "((dataEjemplo.tlSlot.duenio != 'Vacio' && dataEjemplo.tlSlot.duenio.userName == myUser.userName) || (dataEjemplo.tlSlot.duenio2 != 'Vacio' && dataEjemplo.tlSlot.duenio2.userName == myUser.userName) || dataEjemplo.tlSlot.estado == 'Visible' || newSelect != '')"/>
+			    <div class="flipBtn demo3">
+			      <div class="flipBtn_face flipBtn_back demo4">
+			      	<h4 ng-show="dataEjemplo.tlSlot.duenio != 'Vacio'" align=center>{{dataEjemplo.tlSlot.duenio.userName}}</h4>
+			      	<h4 ng-show="dataEjemplo.tlSlot.duenio2 != 'Vacio'" align=center>{{dataEjemplo.tlSlot.duenio2.userName}}</h4>
+			      	<H2 ng-show="(dataEjemplo.tlSlot.duenio != 'Vacio' || dataEjemplo.tlSlot.duenio2 != 'Vacio')"align=center>${{dataEjemplo.valorApuesta}}</H2>
+			      	<h4 ng-show="(dataEjemplo.tlSlot.duenio == 'Vacio' && dataEjemplo.tlSlot.duenio2 == 'Vacio')" align=center>VACIO</h4>
+			      	<h1 ng-show="(dataEjemplo.tlSlot.duenio == 'Vacio' && dataEjemplo.tlSlot.duenio2 == 'Vacio')" align=center>:(</h1>
+			      </div>
+			      <div class="flipBtn_face flipBtn_mid demo3">
+			      </div>
+			      <div class="flipBtn_face flipBtn_front demo3">
+			      </div>
+			    </div>
+			</div>
+	      	<div class="flipBtnWrapper">
+			    <input type="checkbox" class="flipBtn_checkbox" ng-checked="dataEjemplo.trSlot.estado != 'Oculto'" ng-click="RadioButtonClick('TR')" ng-disabled = "((dataEjemplo.trSlot.duenio != 'Vacio' && dataEjemplo.trSlot.duenio.userName == myUser.userName) || (dataEjemplo.trSlot.duenio2 != 'Vacio' && dataEjemplo.trSlot.duenio2.userName == myUser.userName) || dataEjemplo.trSlot.estado == 'Visible' || newSelect != '')"/>
+			    <div class="flipBtn demo3">
+			      <div class="flipBtn_face flipBtn_back demo3">
+			      	<h4 ng-show="dataEjemplo.trSlot.duenio != 'Vacio'" align=center>{{dataEjemplo.trSlot.duenio.userName}}</h4>
+			      	<h4 ng-show="dataEjemplo.trSlot.duenio2 != 'Vacio'" align=center>{{dataEjemplo.trSlot.duenio2.userName}}</h4>
+			      	<H2 ng-show="(dataEjemplo.trSlot.duenio != 'Vacio' || dataEjemplo.trSlot.duenio2 != 'Vacio')"align=center>${{dataEjemplo.valorApuesta}}</H2>
+			      	<h4 ng-show="(dataEjemplo.trSlot.duenio == 'Vacio' && dataEjemplo.trSlot.duenio2 == 'Vacio')" align=center>VACIO</h4>
+			      	<h1 ng-show="(dataEjemplo.trSlot.duenio == 'Vacio' && dataEjemplo.trSlot.duenio2 == 'Vacio')" align=center>:(</h1>
+			      </div>
+			      <div class="flipBtn_face flipBtn_mid demo3">
+			      </div>
+			      <div class="flipBtn_face flipBtn_front demo4">
+			      </div>
+			    </div>
+			 </div>
+	</div>
+    <div id="gridWrapper">
+	      	<div class="flipBtnWrapper">
+			    <input type="checkbox" class="flipBtn_checkbox" ng-checked="dataEjemplo.blSlot.estado != 'Oculto'" ng-click="RadioButtonClick('BL')" ng-disabled = "((dataEjemplo.blSlot.duenio != 'Vacio' && dataEjemplo.blSlot.duenio.userName == myUser.userName) || (dataEjemplo.blSlot.duenio2 != 'Vacio' && dataEjemplo.blSlot.duenio2.userName == myUser.userName) || dataEjemplo.blSlot.estado == 'Visible' || newSelect != '')"/>
+			    <div class="flipBtn demo3">
+			      <div class="flipBtn_face flipBtn_back demo3">
+			      	<h4 ng-show="dataEjemplo.blSlot.duenio != 'Vacio'" align=center>{{dataEjemplo.blSlot.duenio.userName}}</h4>
+			      	<h4 ng-show="dataEjemplo.blSlot.duenio2 != 'Vacio'" align=center>{{dataEjemplo.blSlot.duenio2.userName}}</h4>
+			      	<H2 ng-show="(dataEjemplo.blSlot.duenio != 'Vacio' || dataEjemplo.blSlot.duenio2 != 'Vacio')"align=center>${{dataEjemplo.valorApuesta}}</H2>
+			      	<h4 ng-show="(dataEjemplo.blSlot.duenio == 'Vacio' && dataEjemplo.blSlot.duenio2 == 'Vacio')" align=center>VACIO</h4>
+			      	<h1 ng-show="(dataEjemplo.blSlot.duenio == 'Vacio' && dataEjemplo.blSlot.duenio2 == 'Vacio')" align=center>:(</h1>
+			    </div>
+			      <div class="flipBtn_face flipBtn_mid demo3"></div>
+			      <div class="flipBtn_face flipBtn_front demo3"></div>
+			    </div>
+			  </div>
+	      	<div class="flipBtnWrapper">
+			    <input type="checkbox" class="flipBtn_checkbox" ng-checked="dataEjemplo.brSlot.estado != 'Oculto'" ng-click="RadioButtonClick('BR')" ng-disabled = "((dataEjemplo.brSlot.duenio != 'Vacio' && dataEjemplo.brSlot.duenio.userName == myUser.userName) || (dataEjemplo.brSlot.duenio2 != 'Vacio' && dataEjemplo.brSlot.duenio2.userName == myUser.userName) || dataEjemplo.brSlot.estado == 'Visible' || newSelect != '')"/>
+			    <div class="flipBtn demo3">
+			      <div class="flipBtn_face flipBtn_back demo4">
+			      	<h4 ng-show="dataEjemplo.brSlot.duenio != 'Vacio'" align=center>{{dataEjemplo.brSlot.duenio.userName}}</h4>
+			      	<h4 ng-show="dataEjemplo.brSlot.duenio2 != 'Vacio'" align=center>{{dataEjemplo.brSlot.duenio2.userName}}</h4>
+			      	<H2 ng-show="(dataEjemplo.brSlot.duenio != 'Vacio' || dataEjemplo.brSlot.duenio2 != 'Vacio')"align=center>${{dataEjemplo.valorApuesta}}</H2>
+			      	<h4 ng-show="(dataEjemplo.brSlot.duenio == 'Vacio' && dataEjemplo.brSlot.duenio2 == 'Vacio')" align=center>VACIO</h4>
+			      	<h1 ng-show="(dataEjemplo.brSlot.duenio == 'Vacio' && dataEjemplo.brSlot.duenio2 == 'Vacio')" align=center>:(</h1>
+			    </div>
+			      <div class="flipBtn_face flipBtn_mid demo3"></div>
+			      <div class="flipBtn_face flipBtn_front demo4"></div>
+				</div>
+			</div>
+	</div>
+    <H1>{{gridSelect}}</H1>
+    </ion-list>
+  </ion-content>
+</ion-view>
